@@ -16,7 +16,7 @@ app.use(cors())
 const server=http.createServer(app)
 const io=socketIo(server,{
     cors: {
-      origin: "http://localhost:4200", // Allow Angular frontend
+      origin: "https://chat-app-front-end-pearl.vercel.app", // Allow Angular frontend
       methods: ["GET", "POST"], // Allow these HTTP methods
       allowedHeaders: ["Content-Type"], // Allow custom headers
     },

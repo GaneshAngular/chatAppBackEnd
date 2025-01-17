@@ -64,10 +64,7 @@ const signup = async (req, res) => {
   
   try {
     const user = await userModel.findOne({
-      $or: [
-        { email: { $exists: true, $ne: null } },
-        { mobile: { $exists: true, $ne: null } }
-      ]
+      email: email,
     })
     if (user) {
       console.log(user);
